@@ -19,15 +19,17 @@ class Hash:
 
     def _ToVars(self, file):
         """
-        MT: Line 1
-        M: Total number of pizza
-        T2: No of team of 2
-        T3: No of team of 3
-        T4: No of team of 4
-        menu : list of list of ingredients of individual pizza
-    
+        S: Simulation time in seconds
+        TI: Total number of intersections
+        NS: No of Streets
+        NC: No of Cars
+        BP: Bonus Points
+        SI : list of Street information {street 1, street2, streetname, duration in street}
+        CT:  list of Car Travel {no: of streets, street1, street2, street3}
         """
-        MT = file.pop(0)
+        S, TI, NS, NC, BP, SI, CT
+
+        FL = file.pop(0)
         # print(MT)
         MT = MT.split(" ")
         if len(MT) > 4:
@@ -41,11 +43,11 @@ class Hash:
         for item in file:
             item = item.split(" ")
             menu.append(item[1:])
-        return file, MT, M, T2, T3, T4, menu
+        return file, S, TI, S, C, B, SI
 
     def DataIn(self, filename):
         fileRaw = self._ReadIp(filename)
-        file, MT, M, T2, T3, T4, menu = self._ToVars(fileRaw)
+        file, S, TI, NS, NC, BP, SI, CT   = self._ToVars(fileRaw)
         # return file, MT, M, T2, T3, T4
         return M, T2, T3, T4, menu
 
