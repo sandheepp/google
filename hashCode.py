@@ -20,8 +20,8 @@ class Hash:
         NS: No of Streets
         NC: No of Cars
         BP: Bonus Points
-        SI : list of Street information {street 1, street2, streetname, duration in street}
-        CT:  list of Car Travel {no: of streets, street1, street2, street3}
+        SI : list of Street information {intersection1, intersection2, streetname, duration in street}
+        CT:  list of Car Travel {no: of streets, street1, street2, street3...}
         """
         FL = file.pop(0)
         # print(MT)
@@ -36,8 +36,6 @@ class Hash:
         BP = FL[4]
         SI =[]
         CT = []
-        print( S, TI, NS, NC, BP, SI, CT )
-        print(type(file))
         for i in range(NS):
             item = file[i].split(" ")
             SI.append(item[:])
