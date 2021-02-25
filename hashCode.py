@@ -53,7 +53,6 @@ class Hash:
         return file, S, TI, NS, NC, BP, SI, CT 
 
 
-
 if __name__ == "__main__":
     hash = Hash()
 
